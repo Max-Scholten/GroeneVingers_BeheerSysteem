@@ -41,6 +41,12 @@ jobs:
         mkdir -p database
         touch database/database.sqlite
 
+    - name: Run migrations
+      run: php artisan migrate --force
+
+    - name: Run seeders
+      run: php artisan db:seed --force
+      
     - name: Laravel pint
       run: ./vendor/bin/pint
 
