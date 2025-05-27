@@ -41,6 +41,9 @@ jobs:
         mkdir -p database
         touch database/database.sqlite
 
+    - name: Code sniffering
+      run: vendor/bin/phpcs --standard=PSR12 app
+      
     - name: Execute tests (Unit and Feature tests) via PHPUnit/Pest
       env:
         DB_CONNECTION: sqlite
