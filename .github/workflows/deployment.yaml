@@ -23,8 +23,8 @@ jobs:
     - name: Install Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
-    - name: Install Node.js
-      run: npm install -g npm@latest
+    - name: Check Node.js and npm version
+      run: node -v && npm -v
 
     - name: Generate key
       run: php artisan key:generate
