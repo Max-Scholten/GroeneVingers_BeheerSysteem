@@ -20,6 +20,11 @@ jobs:
     - name: Copy .env
       run: php -r "file_exists('.env') || copy('.env.example', '.env');"
 
+    - name: Set SQLite for CI
+      run: |
+        sed -i 's/^DB_CONNECTION=.*/DB_CONNECTION=sqlite/' .env
+        sed -i 's/^DB_DATABASE=.*/DB_DATABASE=database\/database.sqlite/' .env
+
     - name: Install Dependencies
       run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
@@ -46,7 +51,7 @@ jobs:
 
     - name: Run seeders
       run: php artisan db:seed --force
-      
+
     - name: Laravel pint
       run: ./vendor/bin/pint
 
