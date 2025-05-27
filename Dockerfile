@@ -30,5 +30,5 @@ RUN npm install && npm run build
 # Set permissions
 RUN chown -R www-data:www-data /var/www/storage /var/www/bootstrap/cache
 
-EXPOSE 9000
+EXPOSE 85:00
 CMD ["php artisan migrate --force && php-fpm"]
