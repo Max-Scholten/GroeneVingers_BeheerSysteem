@@ -9,6 +9,6 @@
     {
         public function render(): View
         {
-            return view('layouts.Beheer');
+            return view('layouts.beheer');
         }
     }
