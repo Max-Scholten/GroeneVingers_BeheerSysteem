@@ -46,3 +46,14 @@ jobs:
         DB_CONNECTION: sqlite
         DB_DATABASE: database/database.sqlite
       run: php artisan test
+
+    - name:   Artifact deployment
+      env:
+        GITHUB_SHA: ${{ github.sha }}
+      run: tar -czf "${GITHUB_SHA}".tar.gz --exclude=*.git --exclude=node_modules && echo "Artifact created successfully."
+
+    - name: Store Artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: app-build
+        path: ${GITHUB_SHA}.tar.gz
