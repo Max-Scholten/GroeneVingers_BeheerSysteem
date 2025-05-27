@@ -25,7 +25,6 @@ jobs:
 
     - name: Install Node.js
       run: npm install -g npm@latest
-      run: npm run production
 
     - name: Generate key
       run: php artisan key:generate
