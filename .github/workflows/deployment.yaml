@@ -53,7 +53,7 @@ jobs:
       run: tar -czf "${GITHUB_SHA}".tar.gz --exclude=*.git --exclude=node_modules && echo "Artifact created successfully."
 
     - name: Store Artifact
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: app-build
         path: ${GITHUB_SHA}.tar.gz
