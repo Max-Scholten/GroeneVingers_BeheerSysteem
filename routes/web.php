@@ -1,6 +1,4 @@
 <?php
-<?php
-
 use App\Http\Controllers\BestellingController;
 use App\Http\Controllers\BestellingsregelController;
 use App\Http\Controllers\ContactperController;
@@ -11,7 +9,6 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\BeheerController;
 use App\Http\Controllers\VerkoopController;
 use App\Http\Controllers\VerkoopregelController;
-use App\Http\Controllers\VoorraadsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
