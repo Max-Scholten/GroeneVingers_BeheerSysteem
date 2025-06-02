@@ -1,5 +1,4 @@
 <?php
-
 use App\Http\Controllers\BestellingController;
 use App\Http\Controllers\BestellingsregelController;
 use App\Http\Controllers\ContactperController;
