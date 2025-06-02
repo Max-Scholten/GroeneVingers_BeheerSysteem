@@ -12,7 +12,7 @@ use App\Http\Controllers\VerkoopregelController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('beheers.index');
 });
 
 Route::get('/dashboard', function () {
